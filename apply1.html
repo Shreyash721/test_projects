@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply – SkillCraft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="logo">SkillCraft</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="internships.html">Internships</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="apply.html">Apply</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="form-section">
+  <h1>Internship Application Form</h1>
+
+  <form class="form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="College / University" required>
+
+    <select required>
+      <option selected disabled>Select Internship Domain</option>
+      <option>Web Development</option>
+      <option>Python Development</option>
+      <option>Java Development</option>
+      <option>AI & ML</option>
+    </select>
+
+    <textarea placeholder="Why should we select you?" required></textarea>
+
+    <button type="submit" class="btn">Submit Application</button>
+  </form>
+</section>
+
+<script>
+window.addEventListener("scroll", () => {
+  document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
+});
+function toggleMenu() { document.getElementById("menu").classList.toggle("active"); }
+</script>
+
+</body>
+</html>
